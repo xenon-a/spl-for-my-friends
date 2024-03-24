@@ -14,13 +14,13 @@ int main()
         scanf("%d", &array[c]);
     }
 
-    int max=array[0], min=array[0];
+    int max=-999999, min=999999;
 
     for (int x=0; x<n; x++){
         if (array[x] > max){
             max = array[x];
         }
-        else if (array[x] < min) {
+        if (array[x] < min) {
             min = array[x];
         }
     }

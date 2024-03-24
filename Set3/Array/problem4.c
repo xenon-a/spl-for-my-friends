@@ -6,25 +6,28 @@ int main()
     printf("Enter the number of elements for your array: ");
     scanf("%d", &n);
 
-    int array1[n];
+    int array[n];
 
     printf("Enter the array elements: \n");
 
     for (int x=0; x<n; x++){
-        scanf("%d", &array1[x]);
+        scanf("%d", &array[x]);
     }
 
-    int reversed_array[n], index=0;
+    int temp;
 
-    for (int i=n-1; i>=0; i--){
-        reversed_array[index] = array1[i];
-        index++;
+    // Swapping the elements
+
+    for (int i=0, j=n-1; i<j; i++, j--){
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
-
+    
     printf("Your array after reversing: \n");
 
-    for (int i=0; i<n; i++){
-        printf("%d ", reversed_array[i]);
+    for (int x=0; x<n; x++){
+        printf("%d ", array[x]);
     }
 
     printf("\n");
